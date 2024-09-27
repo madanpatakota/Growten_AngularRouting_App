@@ -13,12 +13,15 @@ export class foodService {
     }
 
     getFoodDetails() {
-        return [{
-            foodID: 1, FoodItem: "Veg" , details : "Fruits , Dosa , Idli"
-        },
-        {
-            foodID: 2, FoodItem: "non-Veg" , details : "Fish , CB"
-        }]
+        return [
+            {
+                foodID: 1, FoodItem: "Veg", details: "Fruits , Dosa , Idli"
+            },
+            {
+                foodID: 2, FoodItem: "non-Veg", details: "Fish , CB"
+            }
+        ]
+        
     }
 
 }

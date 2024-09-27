@@ -20,7 +20,7 @@
 
         <tr *ngFor="let item of foodItems">
             <!-- <a routerLink="fooddetails">Food details</a> -->
-            <td><a routerLink="../fooddetails">{{item.foodID}}</a></td>
+            <td><a routerLink="../fooddetails/{{item.foodID}}">{{item.foodID}}</a></td>
             <td>{{item.FoodItem}}</td>
             <!-- <td><a routerLink="../fooddetails">Food details</a></td> -->
         </tr>

@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { FoodComponent } from './food/food.component';
 import { FooddetailsComponent } from './fooddetails/fooddetails.component';
 import { foodService } from './food.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { foodService } from './food.service';
     ContactusComponent,
     NotfoundComponent,
     FoodComponent,
-    FooddetailsComponent
+    FooddetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

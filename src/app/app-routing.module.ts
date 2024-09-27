@@ -6,12 +6,17 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FoodComponent } from './food/food.component';
 import { FooddetailsComponent } from './fooddetails/fooddetails.component';
+import { canActiveGuard } from './can-active.guard';
+import { LoginComponent } from './login/login.component';
 
 //http://localhost:4200/home
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path: 'home', component: HomeComponent
@@ -25,7 +30,9 @@ const routes: Routes = [
     path: 'food', component: FoodComponent
   },
   {
-    path: 'fooddetails', component: FooddetailsComponent
+    path: 'fooddetails/:foodID', 
+    component: FooddetailsComponent,
+    canActivate : [canActiveGuard]
   },
   {
     path: '**', component: NotfoundComponent
