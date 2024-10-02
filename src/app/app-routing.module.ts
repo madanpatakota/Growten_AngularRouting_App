@@ -8,12 +8,13 @@ import { FoodComponent } from './food/food.component';
 import { FooddetailsComponent } from './fooddetails/fooddetails.component';
 import { canActiveGuard } from './can-active.guard';
 import { LoginComponent } from './login/login.component';
+import { candeacivateGuard } from './candeacivate.guard';
 
 //http://localhost:4200/home
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '', component: LoginComponent
   },
   {
     path: 'login', component: LoginComponent
@@ -32,7 +33,8 @@ const routes: Routes = [
   {
     path: 'fooddetails/:foodID', 
     component: FooddetailsComponent,
-    canActivate : [canActiveGuard]
+    canActivate : [canActiveGuard],
+    canDeactivate : [candeacivateGuard]
   },
   {
     path: '**', component: NotfoundComponent

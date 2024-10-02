@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,12 +9,16 @@ import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor(public router : Router ){}
+
   @ViewChild('userName') _userName:ElementRef;
   evtLogin(){
      localStorage.
          setItem("GrowtonUserName",this._userName.nativeElement.value) ;
-        
-     
+
+      this.router.navigate(['home']);
+
+
   }
 
 }
